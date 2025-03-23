@@ -1,0 +1,13 @@
+2000 step minimization for 10 deg
+ &cntrl
+  imin = 1, 
+  maxcyc=9000, ncyc = 3000,
+  ntpr = 1000, ntwr = 10000,
+  ntf = 1, ntc = 1, cut = 13.0,
+  ntb = 1, ntp = 0,
+  nmropt = 1,
+ &end
+ &wt 
+  type='END',
+ &end
+DISANG=disang.10

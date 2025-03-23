@@ -1,0 +1,8 @@
+
+#mpirun -np 24 sander.MPI -O -i mdin_min.10 -p com-sol.prmtop -c 10.rst -r com-sol_min_10.rst  -o com-sol_min_10.out 
+#mpirun -np 24 sander.MPI -O -i mdin_equi.10 -p com-sol.prmtop -c com-sol_min_10.rst  -r com-sol_equil_10.rst -o com-sol_equil_10.out 
+mpirun -np 12 sander.MPI -O -i mdin_prod.10 -p com-sol.prmtop -c com-sol_equil_10.rst -r com-sol_prod_10.rst -o com-sol_prod_10.out -x a1.mdcrd
+mpirun -np 12 sander.MPI -O -i new.in -p com-sol.prmtop -c com-sol_prod_10.rst -r new.rst -o com-sol_prod_10.out -x a2.mdcrd
+mpirun -np 12 sander.MPI -O -i unbiased.in -p com-sol.prmtop -c com-sol_equil_10.rst -r unbiased.rst -o out -x a0.mdcrd
+
+echo "Execution finished"
