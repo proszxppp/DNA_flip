@@ -1,0 +1,15 @@
+receptor = PTP1B.pdbqt
+ligand = ref_lig.pdbqt
+
+center_x =  48.1642
+center_y =  10.0801
+center_z =  3.11108
+
+size_x = 13.0
+size_y = 13.0
+size_z = 13.0
+
+cpu = 1
+energy_range = 8
+exhaustiveness = 32
+num_modes = 10
